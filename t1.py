@@ -36,17 +36,11 @@ for file_value in file_values:
         temperatures[file_value[0]] = float(file_value[1])
 
 min_temp = None
-max_temp = None
 min_temp_year = None
-max_temp_year = None
 
 for year, temp in temperatures.items():
     if min_temp is None or temp < min_temp:
         min_temp = temp
         min_temp_year = year
-    if max_temp is None or temp > max_temp:
-        max_temp = temp
-        max_temp_year = year
 
 print("Minimum temperature C:", min_temp, "in", min_temp_year)
-print("Maximum temperature C:", max_temp, "in", max_temp_year)
