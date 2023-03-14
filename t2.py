@@ -8,6 +8,11 @@ def get_contents_of_one_file(file_content):
 
 def read_files():
     file_names = os.listdir("weatherfiles")
+
+    # file_reader = open("main.py", "r")
+    # file_content = file_reader.read()
+    # file_reader.close()
+
     file_values = []
     for file_name in file_names:
         with open(f"weatherfiles/{file_name}", "r") as file_reader:
@@ -34,4 +39,4 @@ if dates_with_difference_of_7:
     for date1, date2 in dates_with_difference_of_7:
         print(date1, "and", date2)
 else:
-    print("No dates found with a difference of exactly 7 between Min and Max TemperatureC.")
+    print("No dates found")
