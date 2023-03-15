@@ -29,6 +29,7 @@ def read_files():
             file_content = file_reader.read()
 
             file_values += get_contents_of_one_file(file_content)
+            file_reader.close()
 
     return file_values
 
